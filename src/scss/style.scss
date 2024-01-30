@@ -93,6 +93,14 @@ $orange: #FF5C2B;
     }
 }
 
+.subtitle h2 {
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px; 
+    letter-spacing: -1.76px;
+}
+
 .header-block {
     display: flex;
     justify-content: space-between;
@@ -128,6 +136,7 @@ $orange: #FF5C2B;
     display: none;
 }
 
+/*--------------------------------------main-section------------------------------------------*/
 
 .main-section {
     display: flex;
@@ -244,11 +253,68 @@ $orange: #FF5C2B;
         height: 100%;
     }
 }
+/*--------------------------------------main-section------------------------------------------*/
 
+/*--------------------------------------brands------------------------------------------*/
+.brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 28px 0px;
+    &__item p{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+    }
+}
+/*--------------------------------------brands------------------------------------------*/
 
-
-
-
+/*--------------------------------------section-holiday------------------------------------------*/
+.section-holiday {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__item-photo img {
+        width: 100%;
+    }
+    &__item-wrapper {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__item-title h3 {
+        color: #FFF;
+        font-family: "Bebas";
+        font-size: clamp(25px, 4vw, 56px);
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -1.12px;
+        margin: 0px 0px 30px 0px;
+    }
+    &__item-button a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $black;
+        border-radius: 50px;
+        background: #FFF;
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+        padding: 10px 24px;
+    }
+}
+/*--------------------------------------section-holiday------------------------------------------*/
 @media(hover:hover) {
     .list {
         &__item a:hover {
@@ -373,6 +439,23 @@ $orange: #FF5C2B;
         &__price {
             display: none;
         }
+    }
+    .section-holiday {
+        &__item-title h3 {
+            line-height: 30px;
+            margin: 0px 0px 20px 0px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .section-holiday {
+        &__items {
+            flex-wrap: wrap;
+        }
+    }
+    .subtitle h2 {
+        font-size: 35px;
     }
 }
 
