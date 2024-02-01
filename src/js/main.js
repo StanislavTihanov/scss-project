@@ -1,6 +1,5 @@
 import '/src/scss/style.scss';
 
-
 const burgerMenu = document.querySelector('.header__burger');
 const menuBody = document.querySelector('.menu');
 
@@ -10,4 +9,3 @@ if(burgerMenu) {
         menuBody.classList.toggle('open');
     })
 }
-
